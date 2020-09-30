@@ -1,0 +1,21 @@
+{
+    "country": [
+        "CN"
+    ],
+    "organization": [
+        "k8s"
+    ],
+    "organizationalUnit": [
+        "system-root"
+    ],
+    "province": [
+        "BeiJing"
+    ],
+    "locality": [
+        "BeiJing"
+    ],
+    "hosts": [
+        ""
+    ],
+    "years": 10
+}
