@@ -20,6 +20,10 @@ type CertInformation struct {
 	OrganizationalUnit []string `json:"organizationalUnit"`
 	Province           []string `json:"province"`
 	Locality           []string `json:"locality"`
+	StreetAddress      []string `json:"streetAddress"`
+	PostalCode         []string `json:"postalCode"`
+	SerialNumber       string   `json:"serialNumber"`
+	CommonName         string   `json:"commonName"`
 	CrtName            string
 	KeyName            string
 	IsCA               bool
@@ -70,6 +74,10 @@ func NewCertificate(info CertInformation) *x509.Certificate {
 			OrganizationalUnit: info.OrganizationalUnit,
 			Province:           info.Province,
 			Locality:           info.Locality,
+			StreetAddress:      info.StreetAddress,
+			PostalCode:         info.PostalCode,
+			SerialNumber:       info.SerialNumber,
+			CommonName:         info.CommonName,
 		},
 		NotBefore:             time.Now(),                                                                 //证书的开始时间
 		NotAfter:              time.Now().AddDate(info.Years, 0, 0),                                       //证书的结束时间
